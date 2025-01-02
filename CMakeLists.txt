@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.28)
 project(mahjong)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Mahjong
                     ${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty
@@ -21,8 +21,8 @@ if (UNIX)
     add_definitions("-fPIC")
 endif()
 
-find_package(PythonInterp 3 REQUIRED)
-find_package(PythonLibs 3 REQUIRED)
+find_package (Python3 COMPONENTS Interpreter Development)
+message(use\ python\ interpreter: ${PYTHON_INCLUDE_DIRS})
 include_directories(${PYTHON_INCLUDE_DIRS})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/resource/syanten.dat ${CMAKE_CURRENT_BINARY_DIR}/resource/syanten.dat COPYONLY)
