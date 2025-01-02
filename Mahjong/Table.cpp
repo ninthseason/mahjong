@@ -474,6 +474,17 @@ string Table::to_string() const
 	}
 	ss << "\n";
 
+	ss << "All dora indi:";
+	for (auto i : dora_indicator) {
+		ss << i->to_string() << " ";
+	}
+	ss << '\n';
+	ss << "All uradora indi:";
+	for (auto i : uradora_indicator) {
+		ss << i->to_string() << " ";
+	}
+	ss << '\n';
+
 	ss << "Dora Indicator(s):";
 	for (int i = 0; i < n_active_dora; ++i) {
 		ss << dora_indicator[i]->to_string() << " ";

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.28)
+project(Demo)
+file(GLOB_RECURSE src ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+add_executable(demo ${src})
+target_link_libraries(demo MahjongCore fmt tenhou_shuffle)

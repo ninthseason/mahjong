@@ -32,19 +32,18 @@ string Player::to_string() const
 	std::string str_fuuro;
 	if (call_groups.size() != 0)
 	{
-		str_fuuro += "Calls: ";
+		str_fuuro += "";
 		for (auto call_group : call_groups) {
 			str_fuuro += call_group.to_string();
 			str_fuuro += ' ';
 		}
-		str_fuuro += '\n';
 	}
 
 	return fmt::format(
 		"Pt: {}\n"
 		"Wind: {}\n"
 		"Hand: {}\n"
-		"{}"
+		"Calls: {}\n"
 		"River: {}\n"
 		"Riichi: {}\n"
 		"Menzen: {}", 
